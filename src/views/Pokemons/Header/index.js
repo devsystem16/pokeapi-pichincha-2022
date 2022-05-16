@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { PokemonContext } from "../../../context/PokemonContext";
 
 const Header = () => {
-  const { pokemonsTable, setPokemons } = useContext(PokemonContext);
+  const { pokemonsTable, setPokemons, setIsEditing } =
+    useContext(PokemonContext);
 
   const filtrarPokemon = (text) => {
     const results = pokemonsTable.filter((pokemons) => {
@@ -30,7 +31,7 @@ const Header = () => {
         </div>
 
         <div className="text-right">
-          <button> + Nuevo</button>
+          <button onClick={() => setIsEditing(false)}> + Nuevo</button>
         </div>
       </div>
     </>
