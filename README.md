@@ -1,0 +1,1 @@
+# pokeapi-pichincha-2022
